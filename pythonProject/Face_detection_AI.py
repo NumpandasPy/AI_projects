@@ -23,7 +23,7 @@ cap.set(4, 300)
 
 while True:
    success, img = cap.read()
-   #  1/0 changes
+   #  binares changes
    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
    faces = cv2.CascadeClassifier('faces.xml')
