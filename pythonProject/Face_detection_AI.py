@@ -5,7 +5,6 @@ import numpy
 import numpy as np
 from numpy import dtype
 import matplotlib.pyplot as plt
-# import imutils
 from matplotlib import pyplot as plt
 import pylab as pl
 import easyocr
@@ -13,7 +12,7 @@ import easyocr
 
 
 
-# # For videoCamera detection faces
+# VideoCamera detection faces
 cap = cv2.VideoCapture(0)
 cap.set(3, 500)
 cap.set(4, 300)
@@ -24,7 +23,7 @@ cap.set(4, 300)
 
 while True:
    success, img = cap.read()
-
+   #  binar changes
    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
    faces = cv2.CascadeClassifier('faces.xml')
