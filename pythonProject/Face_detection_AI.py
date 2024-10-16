@@ -23,11 +23,11 @@ cap.set(4, 300)
 
 while True:
    success, img = cap.read()
-   #  binares changes
+   #  bin changes
    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
    faces = cv2.CascadeClassifier('faces.xml')
-
+   # 1.98 - 2.08 (detection 1 - 5 faces, exclude close review)
    results = faces.detectMultiScale(gray, scaleFactor=1.98, minNeighbors=2, minSize=(30, 30))
 
    for (x, y, w, h) in results:
